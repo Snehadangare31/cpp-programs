@@ -1,37 +1,28 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
 using namespace std;
+
 struct student
 {
-char name[100];
-char prn[100];
-char clas[100];
-float grade;
-int mob[100];
-char addr[100];
-char email[100];
-int sr_no[100];
-}s1,s2,s3;
-void display();
-int main()
-{
-  cout<<"enter the name"<<endl;
-  cin>>s1.name>>s2.name>>s3.name;
-  cout<<"enter the prn"<<endl;
-  cin>>s1.prn>>s2.prn>>s3.prn;
-  cout<<"enter the clas"<<endl;
-  cin>>s1.clas>>s2.clas>>s3.clas;
-  cout<<"enter the grade"<<endl;
-  cin>>s1.grade>>s2.grade>>s3.grade;
+    char name[50];
+    int roll;
+    float marks;
+};
 
-display();
-
-}
-void display()
+int main() 
 {
-  cout<<"ACCADEMIC INFORMATION"<<endl;
-  cout<<"name"<<setw(5)<<"prn"<<setw(5)<<"class"<<setw(5)<<"grade"<<endl;
-  cout<<s1.name<<setw(5)<<s1.prn<<setw(5)<<s1.clas<<setw(5)<<s1.grade<<endl;
-  cout<<s2.name<<setw(5)<<s2.prn<<setw(5)<<s2.clas<<setw(5)<<s2.grade<<endl;
-  cout<<s3.name<<setw(5)<<s3.prn<<setw(5)<<s3.clas<<setw(5)<<s3.grade<<endl;
+    student s;
+    cout << "Enter information," << endl;
+    cout << "Enter name: ";
+    cin >> s.name;
+    cout << "Enter roll number: ";
+    cin >> s.roll;
+    cout << "Enter marks: ";
+    cin >> s.marks;
+
+    cout << "\nDisplaying Information," << endl;
+    cout << "Name: " << s.name << endl;
+    cout << "Roll: " << s.roll << endl;
+    cout << "Marks: " << s.marks << endl;
+    return 0;
 }
+
